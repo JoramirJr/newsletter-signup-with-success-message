@@ -1,0 +1,247 @@
+@font-face {
+  font-family: RobotoBold;
+  src: url(./assets/fonts/Roboto-Bold.ttf);
+}
+
+@font-face {
+  font-family: RobotoRegular;
+  src: url(./assets/fonts/Roboto-Regular.ttf);
+}
+
+body {
+  background-color: hsl(234, 29%, 20%);
+  height: 100vh;
+  width: 100vw;
+  display: grid;
+  place-items: center;
+  margin: 0;
+}
+
+#presentation_card {
+  width: 720px;
+  height: 500px;
+  background-color: hsl(0, 0%, 100%);
+  border-radius: 10px;
+  color: hsl(234, 29%, 20%);
+  display: flex;
+  align-content: stretch;
+}
+
+#presentation_card > div {
+  width: 100%;
+  height: 100%;
+}
+
+#call_to_action {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  font-family: RobotoBold;
+  font-size: 35px;
+  text-align: center;
+}
+
+.descriptive_text,
+.descriptive_text > div {
+  font-family: RobotoRegular;
+}
+
+.descriptive_text {
+  margin: 10px 0;
+}
+
+.descriptive_text > div {
+  margin: 10px 0;
+  display: flex;
+  gap: 10px;
+}
+
+#left_segment {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
+  padding: 40px;
+}
+
+#left_segment,
+#right_segment,
+#submit_button,
+#submit_input,
+#confirmation_card {
+  box-sizing: border-box;
+}
+
+#right_segment {
+  padding: 10px;
+}
+
+#input_label {
+  font-size: 10px;
+}
+
+#submission_form {
+  display: flex;
+  flex-direction: column;
+  align-items: start;
+  margin-top: 40px;
+}
+
+#submit_input {
+  border-radius: 5px;
+  padding: 10px;
+  outline: solid 1px hsl(231, 7%, 60%);
+  border: none;
+  transition: outline 0.2s ease;
+  width: 100%;
+  margin-top: 5px;
+}
+
+#submit_input:invalid {
+  border-radius: 5px;
+  padding: 10px;
+  background-color: hsl(0, 84%, 90%);
+  outline: solid 1px hsl(0, 100%, 64%);
+  color: hsl(0, 100%, 64%);
+  border: none;
+}
+
+#submit_input:focus {
+  outline: solid 1px hsl(234, 29%, 20%);
+}
+
+.submit_action_button {
+  padding: 15px 15px;
+  background-color: hsl(234, 29%, 20%);
+  color: white;
+  border: none;
+  border-radius: 5px;
+  font-family: RobotoBold;
+  font-size: 10px;
+  width: 100%;
+  margin-top: 10px;
+}
+
+.submit_action_button:hover {
+  cursor: pointer;
+  background-image: linear-gradient(
+    to right,
+    hsl(0, 100%, 64%),
+    hsl(17, 100%, 64%)
+  );
+}
+
+.decription_list_item {
+  display: flex;
+  align-items: flex-start;
+}
+
+#signup_image {
+  width: 100%;
+  height: 100%;
+}
+
+#labels_input {
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+}
+
+#error_message_label {
+  font-size: 10px;
+  color: hsl(0, 100%, 64%);
+}
+
+#confirmation_card {
+  width: 300px;
+  height: 350px;
+  background-color: white;
+  border-radius: 20px;
+  padding: 40px;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  display: none;
+}
+
+#thanks_message {
+  font-family: RobotoBold;
+  font-size: 34px;
+  color: hsl(234, 29%, 20%);
+}
+
+#confirmation_instructions_message {
+  font-size: 10px;
+  padding-top: 15px;
+  word-spacing: 2px;
+}
+
+#confirmation_instructions_message strong {
+  font-family: RobotoBold;
+}
+
+#messages_div {
+  display: flex;
+  flex-direction: column;
+  font-family: RobotoRegular;
+  margin-top: 10px;
+}
+
+@media (max-width: 375px) {
+  #presentation_card {
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    flex-direction: column-reverse;
+    box-sizing: border-box;
+    justify-content: start;
+  }
+  #left_segment {
+    padding: 0 30px;
+    margin-top: 30px;
+  }
+  #signup_image {
+    width: 100%;
+    height: 300px;
+    object-fit: cover;
+    border-bottom-right-radius: 15px;
+    border-bottom-left-radius: 15px;
+  }
+  #right_segment {
+    padding: 0;
+    height: fit-content;
+  }
+  #call_to_action {
+    text-align: initial;
+  }
+  .descriptive_text {
+    width: 100%;
+  }
+  #confirmation_card {
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding-top: 120px;
+    display: none;
+  }
+  #confirmation_image {
+    width: 65px;
+    height: 65px;
+  }
+  #messages_div {
+    margin-top: 30px;
+  }
+  #confirmation_instructions_message {
+    font-size: 12px;
+    line-height: 20px;
+  }
+  #presentation_card > div {
+    width: 100%;
+    height: fit-content;
+  }
+  .submit_action_button {
+    justify-self: end;
+  }
+}

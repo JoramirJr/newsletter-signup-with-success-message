@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="./assets/images/favicon-32x32.png"
+    />
+    <link rel="stylesheet" href="./index.css" />
+    <title>
+      Frontend Mentor | Newsletter sign-up form with success message
+    </title>
+  </head>
+  <body>
+    <div id="presentation_card">
+      <div id="left_segment">
+        <h1 id="call_to_action">Stay updated!</h1>
+        <small class="descriptive_text">
+          Join 60,000+ product managers receiving monthly updates on
+        </small>
+        <div class="descriptive_text">
+          <div class="descriptive_list_item">
+            <img src="./assets/images/icon-list.svg" width="16" height="16" />
+            <small>Product discovery and building what matters</small>
+          </div>
+          <div class="descriptive_list_item">
+            <img src="./assets/images/icon-list.svg" width="16" height="16" />
+            <small>Measuring to ensure updates are a success</small>
+          </div>
+          <div class="descriptive_list_item">
+            <img src="./assets/images/icon-list.svg" width="16" height="16" />
+            <small>And much more</small>
+          </div>
+          <form id="submission_form">
+            <div id="labels_input" ><label id="input_label" for="submit_input">Email Address</label></div>
+            <input
+              id="submit_input"
+              placeholder="email@company.com"
+              required
+            />
+            <button class="submit_action_button" type="submit">
+              Subscribe to monthly newsletter
+            </button>
+          </form>
+        </div>
+      </div>
+      <div id="right_segment">
+        <img
+          src="./assets/images/illustration-sign-up-desktop.svg"
+          alt="User interfaces images"
+          id="signup_image"
+        />
+      </div>
+    </div>
+    <div id="confirmation_card">
+      <div>
+        <img src="./assets/images/icon-list.svg" id="confirmation_image" />
+      </div>
+      <div id="messages_div" >
+        <span id="thanks_message" >Thanks for subscribing!</span>
+        <span id="confirmation_instructions_message" >
+        </span>
+      </div>
+      <button class="submit_action_button" >
+        Dismiss Message
+      </button>
+    </div>
+  </body>
+</html>
+<script type="text/javascript" src="./index.js"></script>
